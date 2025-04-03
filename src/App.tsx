@@ -1,5 +1,5 @@
 import { StrictMode } from 'react'
-import { BrowserRouter as Router } from 'react-router-dom' 
+import { BrowserRouter } from 'react-router-dom'
 import { CartProvider } from './context/CartContext'
 import { FilterProvider } from './context/FilterContext'
 import Header from './components/Header'
@@ -8,7 +8,7 @@ import AppRoutes from './routes'
 const App = () => {
   return (
     <StrictMode>
-      <Router> 
+      <BrowserRouter> 
         <FilterProvider>
           <CartProvider>
             <div className="min-h-screen flex flex-col">
@@ -19,7 +19,7 @@ const App = () => {
             </div>
           </CartProvider>
         </FilterProvider>
-      </Router>
+      </BrowserRouter>
     </StrictMode>
   )
 }
